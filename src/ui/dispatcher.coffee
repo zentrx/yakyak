@@ -102,7 +102,7 @@ handle 'attop', (attop) ->
     conv.updateAtTop attop
 
 handle 'history', (conv_id, timestamp) ->
-    ipc.send 'getconversation', conv_id, timestamp, 20
+    ipc.send 'getconversation', conv_id, timestamp, 50
 
 handle 'handleconversationmetadata', (r) ->
     return unless r.conversation_state
